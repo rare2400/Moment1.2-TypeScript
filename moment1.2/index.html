@@ -10,8 +10,53 @@
 </head>
 
 <body>
+  <header>
+    <h1>Moment 1.2</h1>
+  </header>
   <main class="content">
-    
+    <section class="text-box">
+      <div id="error"></div>
+      <div class="form-box">
+      <h2>Lägg till kurs</h2>
+      <form id="addCourseForm">
+        <label for="code">Kurskod:</label>
+        <input type="text" id="code" name="code">
+        <br>
+        <label for="name">Namn:</label>
+        <input type="text" id="name" name="name">
+        <br>
+        <label for="progression">Progression:</label>
+        <select id="progression" name="progression">
+          <option value="A">A</option>
+          <option value="B">B</option>
+          <option value="C">C</option>
+        </select>
+        <br>
+        <label for="syllabus">Syllabus:</label>
+        <input type="url" id="syllabus" name="syllabus">
+        <br>
+        <button type="submit">Lägg till</button>
+      </form>
+    </div>
+      <table id="courseTable">
+        <h3>Kurser</h3>
+        <thead> 
+          <tr>
+            <th>Kurskod</th>
+            <th>Namn</th>
+            <th>Progression</th>
+            <th id="syllabus">Syllabus</th>
+          </tr>
+        </thead>
+      </table>
+    </section>
+    <footer>
+      <p>
+        Laborationsuppgift för kursen DT208G, <br> Programmering i TypeScript <br>
+        Copyright &copy; 2025 Ramona Reinholdz
+      </p>
+    </footer>
+  </main>
 </body>
 
 </html>
