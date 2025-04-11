@@ -87,3 +87,19 @@ td {
 #syllabus {
     text-align: center;
 }
+
+/* css for bigger screens */
+@media only screen and (min-width: 50rem) {
+    .form-box {
+        max-width: 50%;
+        margin: 1.3rem auto;
+    }
+
+    button {
+        width: 50%;
+    }
+
+    td {
+        padding: 1.2rem 1rem;
+    }
+}
