@@ -1,0 +1,89 @@
+body {
+    background-color: #f0f0f0;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    margin: 0;
+    padding: 0;
+}
+
+header,
+footer {
+    background-color: rgb(149, 182, 217);
+    padding: 0.2rem;
+    text-align: center;
+}
+
+footer {
+    margin-top: 2rem;
+}
+
+h2,
+h3 {
+    margin: 0.5rem 0 0;
+    font-size: 1.5rem;
+}
+
+main {
+    text-align: center;
+}
+
+main table {
+    margin: 0 auto;
+    border-collapse: collapse;
+}
+
+.form-box {
+    background-color: white;
+    border: 1px solid rgb(200, 200, 200);
+    margin: 1rem auto;
+}
+
+form {
+    margin: 1rem auto 2rem;
+    max-width: 90%;
+    display: flex;
+    flex-direction: column;
+    border-spacing: 0.3rem;
+}
+
+input[type="text"],
+input[type="url"],
+select,
+button {
+    height: 1.3rem;
+    margin: 0.5rem auto;
+    border: 1px solid rgb(200, 200, 200);
+}
+
+input[type="text"],
+input[type="url"] {
+    width: 100%;
+}
+
+select {
+    margin-left: 0;
+    width: 10%;
+}
+
+label {
+    text-align: left;
+}
+
+button {
+    width: 80%;
+    height: 2rem;
+    background-color: rgb(149, 182, 217);
+}
+
+th {
+    text-align: left;
+}
+
+th,
+td {
+    border-bottom: 1px solid rgb(200, 200, 200);
+    padding: 10px;
+}
+
+#syllabus {
+    text-align: center;
+}
