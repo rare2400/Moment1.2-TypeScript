@@ -12,4 +12,4 @@ För att följa TypeScripts hårdtypning har typer för att definiera variabler,
 Npm-paketet vite har även använts för att automatisera utvecklingsprocessen och transpilera TypeScript-koden i till JavaScript,
 vilket gör det möjligt för webbläsaren att tolka koden.
 
-Uppgiften är publicerad på Netlify som stödjer en automatiserad publiceringsprocess.
+Uppgiften är publicerad på Netlify som stödjer en automatiserad publiceringsprocess och [här är länken till sidan](https://typescript1-rare2400.netlify.app/).
