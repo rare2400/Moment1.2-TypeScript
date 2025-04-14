@@ -67,6 +67,9 @@ function renderCourses(): void {
         const thead = document.createElement('th');
         thead.textContent = header;
         theadRow.appendChild(thead);
+
+        //Lägger till en rubrikrad i tabellen
+        courseTable.appendChild(theadRow);
     });
 
     //Lägger till kurser i tabellen
@@ -100,7 +103,7 @@ function renderCourses(): void {
 
         //Raden läggs till i tabellen
         courseTable.appendChild(row);
-    })
+    });
 
 }
 
