@@ -56,27 +56,53 @@ function renderCourses(): void {
         return;
     }
 
-    courseTable.innerHTML = `<tr>
-        <th>Kurskod</th>
-        <th>Kursnamn</th>
-        <th>Progression</th>
-        <th>Kursplan</th>
-    </tr>`;
+    //Tömmer tabellen
+    courseTable.innerHTML = '';
 
+    //Tabellens rubriker
+    const theadRow = document.createElement('tr');
+    const headerNames = ['Kurskod', 'Kursnamn', 'Progression', 'Kursplan'];
+
+    headerNames.forEach(header => {
+        const thead = document.createElement('th');
+        thead.textContent = header;
+        theadRow.appendChild(thead);
+    });
+
+    //Lägger till kurser i tabellen
     const courses = getCourses();
 
     courses.forEach(course => {
         const row = document.createElement('tr');
-        row.innerHTML = `
-            <td>${course.code}</td>
-            <td>${course.name}</td>
-            <td>${course.progression}</td>
-            <td><a href="${course.syllabus}" target="_blank">Kursplan</a></td>
-        `;
-        courseTable.appendChild(row);
-    });
-}
 
+        //Skapar celler för varje kursdel i raden
+        const codeCell = document.createElement('td');
+        codeCell.textContent = course.code;
+
+        const nameCell = document.createElement('td');
+        nameCell.textContent = course.name;
+
+        const progrCell = document.createElement('td');
+        progrCell.textContent = course.progression;
+
+        const linkCell = document.createElement('td');
+        const link = document.createElement('a');
+        link.href = course.syllabus;
+        link.target = '_blank';
+        link.textContent = 'Kursplan';
+        linkCell.appendChild(link);
+
+        //lägger till celler i raden
+        row.appendChild(codeCell);
+        row.appendChild(nameCell);
+        row.appendChild(progrCell);
+        row.appendChild(linkCell);
+
+        //Raden läggs till i tabellen
+        courseTable.appendChild(row);
+    })
+
+}
 
 //Lägger till tillagda kurser i localStorage
 function addCourse(course: CourseInfo): void {
