@@ -84,10 +84,6 @@ td {
     padding: 10px;
 }
 
-#syllabus {
-    text-align: center;
-}
-
 /* css for bigger screens */
 @media only screen and (min-width: 50rem) {
     .form-box {
