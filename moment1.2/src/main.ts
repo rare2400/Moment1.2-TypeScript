@@ -43,6 +43,7 @@ if (courseForm) {
             return;
         };
 
+        addCourse(newCourse);
         courseForm.reset();
     });
 }
@@ -54,6 +55,13 @@ function renderCourses(): void {
         console.error("courseTable hittades inte!");
         return;
     }
+
+    courseTable.innerHTML = `<tr>
+        <th>Kurskod</th>
+        <th>Kursnamn</th>
+        <th>Progression</th>
+        <th>Kursplan</th>
+    </tr>`;
 
     const courses = getCourses();
 
@@ -67,4 +75,25 @@ function renderCourses(): void {
         `;
         courseTable.appendChild(row);
     });
+}
+
+
+//Lägger till tillagda kurser i localStorage
+function addCourse(course: CourseInfo): void {
+    const courses = getCourses();
+
+    //Kontrollerar om kurskoden är unik
+    if (courses.some(c => c.code === course.code)) {
+        alert('Kurskoden måste vara unik!');
+        return;
+    }
+
+    courses.push(course);
+    saveCourses(courses);
+    renderCourses();
+}
+
+//Sparar kurser till localStorage
+function saveCourses(courses: CourseInfo[]): void {
+    localStorage.setItem('courses', JSON.stringify(courses));
 }
